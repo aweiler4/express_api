@@ -10,10 +10,4 @@ const app = express();
 // SEND USER TO THE RECORD ROUTER
 app.use('/records', recordRouter);
 
-//CREATE A PORT TO LISTEN FOR REQUEST/RESPONSE CYCLE
-const port = 3000;
-
-//LISTEN FOR REQUEST/RESPONSE
-app.listen(port, () => {
-    console.log(`Server started on port`, port);
-});
+module.exports = app;
