@@ -23,9 +23,10 @@ const DB = mongoose.connect(process.env.DATABASE.replace('<password>', process.e
 });
 
 //CREATE A PORT TO LISTEN FOR REQUEST/RESPONSE CYCLE
-const port = 3000;
+
+const PORT = process.env.PORT
 
 //LISTEN FOR REQUEST/RESPONSE
-app.listen(port, () => {
-    console.log(`Server started on port`, port);
+app.listen(PORT, () => {
+    console.log(`Server started on port ${PORT}`);
 });
